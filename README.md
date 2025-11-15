@@ -57,7 +57,6 @@ Put the images you want to label into IMAGE_DIR.
 For example, if you use the default config:
 
 ```markdown
-```text
 boundingBox-drawing-tool-for-Qwen2509/
   box_tool.py
   back1.png
