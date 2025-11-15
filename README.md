@@ -42,15 +42,19 @@ pip install -r requirements.txt
 ## 3. Configuration
 
 `IMAGE_DIR = "."`                 # folder containing images
+
 `CLASS_ID = 0`                    # YOLO class id
 
+
 `OUTPUT_BOXED_DIR = "boxed"`      # output folder for boxed images
+
 `OUTPUT_LABEL_DIR = "labels"`     # output folder for YOLO labels
 
 Supported image formats:
-.png  .jpg  .jpeg  .bmp
 
-The script will find all images in IMAGE_DIR with these extensions and process them in sorted filename order.
+`.png  .jpg  .jpeg`
+
+The script will find all images in `IMAGE_DIR` with these extensions and process them in sorted filename order.
 
 ## 4. Prepare Images
 Put the images you want to label into IMAGE_DIR.
@@ -65,29 +69,46 @@ boundingBox-drawing-tool-for-Qwen2509/
 ```
 ## 5. Run the Tool
 In the project folder:
+
+```bash
 python box_tool.py
+```
 
 An OpenCV window named image will pop up and show the first image.
 
 ## 6. Controls
 Mouse
+
 Left click + drag   -> draw a bounding box
+
 Release mouse       -> confirm the box
+
 You can draw multiple boxes on one image
 
+
 Keyboard (make sure the image window is focused)
+
 s  -> Save current image + labels, go to NEXT image
+
 d  -> Skip current image WITHOUT saving, go to NEXT image
+
 z  -> Undo the last bounding box
+
 r  -> Remove ALL boxes on the current image
+
 q  -> Quit the program
+
 
 ## 7. Outputs
 For an input image:
+
 back1.png
 
+
 You will get:
+
 boxed/back1_boxed.png   # image with red rectangles
+
 labels/back1.txt        # YOLO label file
 
 All coordinates are normalized to the range [0, 1], which is compatible with standard YOLO implementations.
