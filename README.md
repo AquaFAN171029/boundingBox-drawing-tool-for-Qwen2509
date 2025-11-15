@@ -1,10 +1,10 @@
-Bounding Box Drawing Tool for Qwen2509
+# Bounding Box Drawing Tool for Qwen2509
 
 A small Python + OpenCV tool for drawing bounding boxes on images and exporting YOLO-format label files.
 GitHub repo:
 https://github.com/AquaFAN171029/boundingBox-drawing-tool-for-Qwen2509
 
-1. Features
+## 1. Features
 
 Scan a folder and load images one by one (sorted by filename)
 Draw multiple bounding boxes per image with the mouse
@@ -14,54 +14,63 @@ Save:
 A YOLO .txt label file
 An image with red rectangles drawn on it for visual checking
 
-2. Installation
-2.1 Clone the repository
+## 2. Installation
+### 2.1 Clone the repository
+```bash
 git clone https://github.com/AquaFAN171029/boundingBox-drawing-tool-for-Qwen2509.git
 cd boundingBox-drawing-tool-for-Qwen2509
-
-2.2 Create a virtual environment
+```
+### 2.2 Create a virtual environment
 
 macOS / Linux
+```bash
 python3 -m venv .venv
 source .venv/bin/activate
+```
 
 Windows
+```bash
 python -m venv .venv
 .\.venv\Scripts\activate
+```
 
-2.3 Install dependencies
+### 2.3 Install dependencies
+```bash
 pip install -r requirements.txt
+```
 
-3. Configuration
+## 3. Configuration
 
-IMAGE_DIR = "."                 # folder containing images
-CLASS_ID = 0                    # YOLO class id
+`IMAGE_DIR = "."`                 # folder containing images
+`CLASS_ID = 0`                    # YOLO class id
 
-OUTPUT_BOXED_DIR = "boxed"      # output folder for boxed images
-OUTPUT_LABEL_DIR = "labels"     # output folder for YOLO labels
+`OUTPUT_BOXED_DIR = "boxed"`      # output folder for boxed images
+`OUTPUT_LABEL_DIR = "labels"`     # output folder for YOLO labels
 
 Supported image formats:
 .png  .jpg  .jpeg  .bmp
 
 The script will find all images in IMAGE_DIR with these extensions and process them in sorted filename order.
 
-4. Prepare Images
+## 4. Prepare Images
 Put the images you want to label into IMAGE_DIR.
 For example, if you use the default config:
 
+```markdown
+```text
 boundingBox-drawing-tool-for-Qwen2509/
   box_tool.py
   back1.png
   back2.png
   ...
-
-5. Run the Tool
+```
+## 5. Run the Tool
 In the project folder:
 python box_tool.py
 
 An OpenCV window named image will pop up and show the first image.
 
-6. Controls
+## 6. Controls
 Mouse
 Left click + drag   -> draw a bounding box
 Release mouse       -> confirm the box
@@ -74,7 +83,7 @@ z  -> Undo the last bounding box
 r  -> Remove ALL boxes on the current image
 q  -> Quit the program
 
-7. Output
+## 7. Outputs
 For an input image:
 back1.png
 
