@@ -77,7 +77,8 @@ python box_tool.py
 An OpenCV window named image will pop up and show the first image.
 
 ## 6. Controls
-Mouse
+
+### 6.1 Mouse
 
 Left click + drag   -> draw a bounding box
 
@@ -86,7 +87,7 @@ Release mouse       -> confirm the box
 You can draw multiple boxes on one image
 
 
-Keyboard (make sure the image window is focused)
+### 6.2 Keyboard (make sure the image window is focused)
 
 s  -> Save current image + labels, go to NEXT image
 
